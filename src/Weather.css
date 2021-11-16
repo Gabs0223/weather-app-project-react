@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Bungee+Shade&family=Staatliches&display=swap");
+.Weather {
+  border: 1px solid seagreen;
+  font-family: "Baloo Tamma 2", cursive;
+  border-radius: 4px;
+  padding: 16px;
+}
+.Weather h1 {
+  color: seagreen;
+  font-family: "Bungee Shade", cursive;
+}
+.Weather form {
+  margin-bottom: 20px;
+}
+.Weather .temp {
+  font-weight: bold;
+  color: olivedrab;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 400;
+}
+.Weather .unit {
+  color: olivedrab;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -25px;
+  margin-left: 5px;
+}
