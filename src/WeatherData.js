@@ -15,10 +15,7 @@ export default function WeatherData(props) {
         <div className="col-6">
           <div className="row">
             <div className="col-6">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="Mostly Cloudy"
-              />
+              <img src={props.data.icon} alt={props.data.description} />
             </div>
             <div className="col-6">
               <span className="temp">{props.data.temperature}</span>
