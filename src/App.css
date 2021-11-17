@@ -1,8 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Bungee+Shade&family=Staatliches&display=swap");
+
 .App {
   max-width: 650px;
   margin: 30px auto;
+  font-family: "Staatliches", cursive;
 }
 .App footer {
-  font-size: 11px;
+  font-size: 15px;
+  font-family: "Baloo Tamma 2", cursive;
   margin: 30px 0;
+  text-align: center;
+}
+.App h1 {
+  padding: 30px;
+  text-align: center;
 }

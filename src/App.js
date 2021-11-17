@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>weatherApp</h1>
+        <h1>Search any city in the 🌍🌎🌏 !</h1>
         <Weather defaultCity="Mexico City" />
         <footer>
           This project was coded by Gabri Sanchez and is{" "}
