@@ -2,7 +2,7 @@
 
 .App {
   max-width: 650px;
-  margin: 30px auto;
+  margin: 60px auto;
   font-family: "Staatliches", cursive;
 }
 .App footer {
@@ -10,8 +10,13 @@
   font-family: "Baloo Tamma 2", cursive;
   margin: 30px 0;
   text-align: center;
+  color: gold;
 }
 .App h1 {
   padding: 30px;
   text-align: center;
+}
+.App .head {
+  color: gold;
+  -webkit-text-stroke: 1px goldenrod;
 }

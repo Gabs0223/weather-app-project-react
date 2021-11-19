@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherData from "./WeatherData";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -17,6 +18,7 @@ export default function Weather(props) {
       city: response.data.name,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
+      coordinates: response.data.coord,
     });
   }
 
@@ -38,28 +40,32 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="Weather">
-        <WeatherData data={weatherData} />
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-9">
-              <input
-                type="search"
-                placeholder="City Name..."
-                className="form-control"
-                autoFocus="on"
-                onChange={handleCityName}
-              />
+      <div>
+        <div className="Weather">
+          <WeatherData data={weatherData} />
+          <form onSubmit={handleSubmit}>
+            <div className="row">
+              <div className="col-9">
+                <input
+                  type="search"
+                  placeholder="City Name..."
+                  className="form-control"
+                  autoFocus="on"
+                  onChange={handleCityName}
+                />
+              </div>
+              <div className="col-3">
+                <input
+                  type="submit"
+                  value="🔎"
+                  className="btn btn-primary w-80"
+                />
+              </div>
             </div>
-            <div className="col-3">
-              <input
-                type="submit"
-                value="🔎"
-                className="btn btn-primary w-80"
-              />
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
+        <br />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
